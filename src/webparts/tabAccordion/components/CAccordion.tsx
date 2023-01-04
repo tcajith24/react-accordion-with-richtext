@@ -1,6 +1,3 @@
-
-
-
 import * as React from 'react';
 import styles from './CAccordion.module.scss';
 import { ICAccordionProps } from './ICAccordionProps';
