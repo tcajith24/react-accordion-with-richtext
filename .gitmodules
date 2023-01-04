@@ -1,0 +1,3 @@
+[submodule "SPFx-webparts"]
+	path = SPFx-webparts
+	url = https://github.com/tcajith24/SPFx-webparts
