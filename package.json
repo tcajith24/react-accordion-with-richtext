@@ -9,17 +9,19 @@
     "test": "gulp test"
   },
   "dependencies": {
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
-    "office-ui-fabric-react": "7.174.1",
     "@microsoft/sp-core-library": "1.13.0",
-    "@microsoft/sp-property-pane": "1.13.0",
-    "@microsoft/sp-webpart-base": "1.13.0",
     "@microsoft/sp-lodash-subset": "1.13.0",
     "@microsoft/sp-office-ui-fabric-core": "1.13.0",
+    "@microsoft/sp-property-pane": "1.13.0",
+    "@microsoft/sp-webpart-base": "1.13.0",
     "@pnp/spfx-controls-react": "^3.5.0",
     "@pnp/spfx-property-controls": "^3.3.0",
-    "@tinymce/tinymce-react": "^2.2.5"
+    "@tinymce/tinymce-react": "^2.2.5",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.3",
+    "office-ui-fabric-react": "7.174.1",
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "devDependencies": {
     "@types/react": "16.9.51",

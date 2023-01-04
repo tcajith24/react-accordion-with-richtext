@@ -25,16 +25,16 @@ export default class CAccordion extends React.Component<ICAccordionProps, {}> {
   public render(): React.ReactElement<ICAccordionProps> {
     if (this.props.displayMode === DisplayMode.Edit) {
       return (
-        <div className="side-content">
+        <div className="side-content container">
           <div className='side-content-item no-bg-title pt-0'>
             <div className={styles.webpartheader}>
-              {/* <WebPartTitle displayMode={this.props.displayMode}
+              <WebPartTitle displayMode={this.props.displayMode}
                 title={this.props.title}
                 updateProperty={this.props.fUpdateProperty}
-                className={styles.webparttitle} /> */}
-              <h1 className="no-bold subsec-margin gold-txt">
+                className={"no-bold subsec-margin gold-txt"} />
+              {/* <h1 className="no-bold subsec-margin gold-txt">
                 Talent Acquisition
-              </h1>
+              </h1> */}
             </div>
             <div className='sec-margin'>
               <Accordion className={"accordion menu-accordion"} aria-live="polite" accordion={this.props.accordion}>
@@ -97,16 +97,16 @@ export default class CAccordion extends React.Component<ICAccordionProps, {}> {
     }
     else {
       return (
-        <div className="side-content">
+        <div className="side-content container">
           <div className='side-content-item no-bg-title pt-0'>
             <div className={styles.webpartheader}>
-              {/* <WebPartTitle displayMode={this.props.displayMode}
+              <WebPartTitle displayMode={this.props.displayMode}
                 title={this.props.title}
                 updateProperty={this.props.fUpdateProperty}
-                className={styles.webparttitle} /> */}
-              <h1 className="no-bold subsec-margin gold-txt">
+                className={"no-bold subsec-margin gold-txt"} />
+              {/* <h1 className="no-bold subsec-margin gold-txt">
                 Talent Acquisition
-              </h1>
+              </h1> */}
             </div>
             <div className='sec-margin'>
               <Accordion className={"accordion menu-accordion"} aria-live="polite" accordion={this.props.accordion}>

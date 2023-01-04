@@ -2,13 +2,18 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import { Version, Guid } from '@microsoft/sp-core-library';
 import { BrowserUtilities } from '@microsoft/sp-core-library/lib-commonjs/BrowserUtilities';
+
 import {
   BaseClientSideWebPart,
   IWebPartPropertiesMetadata,
   WebPartContext
 } from '@microsoft/sp-webpart-base';
 
-// require('bootstrap');
+import { PropertyFieldCollectionData, CustomCollectionFieldType } from '@pnp/spfx-property-controls/lib/PropertyFieldCollectionData';
+
+
+import 'jquery';
+import 'bootstrap';
 
 import {
   IPropertyPaneConfiguration,
@@ -33,8 +38,8 @@ export interface ITabAccordionWebPartProps {
   tabContent: string;
 }
 
-SPComponentLoader.loadCss("https://ttponline.sharepoint.com/sites/FEO1/Style%20Library/FEO1/css/bootstrap-v5.2.3.css?n=1");
-SPComponentLoader.loadScript("https://ttponline.sharepoint.com/sites/FEO1/Style%20Library/FEO1/js/bootstrap-v5.2.3.js?n=1");
+// SPComponentLoader.loadCss("https://ttponline.sharepoint.com/sites/FEO1/Style%20Library/FEO1/css/bootstrap-v5.2.3.css?n=1");
+// SPComponentLoader.loadScript("https://ttponline.sharepoint.com/sites/FEO1/Style%20Library/FEO1/js/bootstrap-v5.2.3.js?n=1");
 
 
 export default class TabAccordionWebPart extends BaseClientSideWebPart<ITabAccordionWebPartProps> {
@@ -126,10 +131,10 @@ export default class TabAccordionWebPart extends BaseClientSideWebPart<ITabAccor
   //executes only before property pane is loaded.
   protected async loadPropertyPaneResources(): Promise<void> {
     // import additional controls/components
-    const { PropertyFieldCollectionData, CustomCollectionFieldType } = await import (
-      /* webpackChunkName: 'pnp-propcontrols-colldata' */
-      '@pnp/spfx-property-controls/lib/PropertyFieldCollectionData'
-    );
+    // const { PropertyFieldCollectionData, CustomCollectionFieldType } = await import (
+    //   /* webpackChunkName: 'pnp-propcontrols-colldata' */
+    //   '@pnp/spfx-property-controls/lib/PropertyFieldCollectionData'
+    // );
 
     
 
@@ -152,10 +157,11 @@ export default class TabAccordionWebPart extends BaseClientSideWebPart<ITabAccor
           groups: [
             {
               groupName: strings.BasicGroupName,
+              isCollapsed:true,
               groupFields: [
                 PropertyPaneDropdown('type', {
                   label: strings.Type,
-                  disabled: false,                   
+                  disabled: false,
                   options: [
                     {key: 'Accordion', text: 'Accordion'},
                     {key: 'Tab', text: 'Tab'}

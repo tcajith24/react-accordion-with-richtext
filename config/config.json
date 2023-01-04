@@ -11,14 +11,10 @@
       ]
     }
   },
-  "externals": {     
+  "externals": {
     "tinymce": {
       "path": "https://cdnjs.cloudflare.com/ajax/libs/tinymce/5.10.3/tinymce.min.js",
       "globalName": "tinymce"
-    },
-    "bootstrap": {
-      "path": "https://ttponline.sharepoint.com/sites/FEO1/Style%20Library/FEO1/js/bootstrap-v5.2.3.js",
-      "globalName": "bootstrap"
     }
   },
   "localizedResources": {
